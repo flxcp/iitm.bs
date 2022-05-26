@@ -1,0 +1,22 @@
+body {
+  background-color: #fdfdbb;
+}
+a {
+  color: #ff0000;
+  text-decoration: none;
+}
+.textblue {
+  color: #0000ff;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+.hometitle {
+  text-align: center;
+}
+div {
+  margin: 20px;
+}

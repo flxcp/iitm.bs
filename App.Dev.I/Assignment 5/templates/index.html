@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IITM Madras</title>
+  </head>
+  <body>
+    <h1 class="mainTitle">Students list</h1>
+    <table id="all-students">
+      <tr>
+        <th>SNo</th>
+        <th>Roll Number</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Actions</th>
+      </tr>
+      {% for indv_students in students %}
+      <tr>
+        <td>{{loop.index}}</td>
+        <td><a href="{{ url_for('view', student_id=indv_students.student_id) }}"
+          >{{indv_students.roll_number}}</a></td>
+        <td>{{indv_students.first_name}}</td>
+        <td>{{indv_students.last_name}}</td>
+        <td>
+          <a
+            href="{{ url_for('update', student_id=indv_students.student_id) }}"
+            type="button"
+            >Update</a
+          >
+          <a
+            href="{{ url_for('delete', student_id=indv_students.student_id) }}"
+            type="button"
+            >Delete</a
+          >
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+    <a href="{{ url_for('create') }}">+Add Student</a>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+body {
+  background-color: #fdfdbb;
+}
+div {
+  margin: 20px;
+}
+a {
+  color: #ff0000;
+  text-decoration: none;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+th {
+  text-align: center;
+  background-color: #259e3f;
+  border: 2px solid #000000;
+  padding: 5px;
+}
+td {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: right;
+  border: 2px solid #000000;
+  padding: 5px;
+}
+table {
+  border-collapse: collapse;
+  border: 2px solid #000000;
+}

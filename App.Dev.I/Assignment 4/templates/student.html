@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="mainTitle">Student Details</h1>
+    <table border="2" id="student-details-table">
+      <tr>
+        <th>Student id</th>
+        <th>Course id</th>
+        <th>Marks</th>
+      </tr>
+      {% for sub_id, marks in students_details %}
+      <tr>
+        <td>{{ student_id }}</td>
+        <td>{{ sub_id }}</td>
+        <td>{{ marks }}</td>
+      </tr>
+      {% endfor %}
+      <tr>
+        <td colspan="2" style="text-align: center">Total Marks</td>
+        <td>{{ total_marks }}</td>
+      </tr>
+    </table>
+    <br />
+    <a href="/" class="go">Go Back</a>
+  </body>
+</html>

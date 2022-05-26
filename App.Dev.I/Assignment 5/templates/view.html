@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IIT Madras</title>
+  </head>
+  <body>
+    <h1 class="studentTitle">Student Details</h1>
+    <table id="personal-details">
+      <tr>
+        <th>Roll Number</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+      </tr>
+      <tr>
+        <td>{{student.roll_number}}</td>
+        <td>{{student.first_name}}</td>
+        <td>{{student.last_name}}</td>
+      </tr>
+    </table>
+    <h1 class="studentTitle">Enrollment Details</h1>
+    <table id="enroll-table">
+      <tr>
+        <th>S. No.</th>
+        <th>Course Code</th>
+        <th>Course Name</th>
+        <th>Course Description</th>
+      </tr>
+      {% for course in student.courses %}
+      <tr>
+        <td>{{loop.index}}</td>
+        <td>{{course.course_code}}</td>
+        <td>{{course.course_name}}</td>
+        <td>{{course.course_description}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    <a href="{{ url_for('index') }}">Go Back</a>
+  </body>
+</html>
